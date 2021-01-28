@@ -58,7 +58,7 @@ class EditGameActivity : AppCompatActivity() {
 
                     val usersRef = ref
 
-                    usersRef.child(uuidgame).setValue(Game(binding.valueName.text.toString(),binding.valueCreated.text.toString(), binding.valueDesc.text.toString(), it.toString()))
+                    usersRef.child(uuidgame).setValue(Game(binding.valueName.text.toString(),binding.valueCreated.text.toString(), binding.valueDesc.text.toString(), it.toString(), uuidgame))
                 }.addOnFailureListener {
                     // Handle any errors
                 }

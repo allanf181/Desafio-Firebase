@@ -1,5 +1,6 @@
 package com.example.desafio_firebase
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -35,15 +36,13 @@ class HomeAdapter(options: FirebaseRecyclerOptions<Game>) : FirebaseRecyclerAdap
     override fun onBindViewHolder(holder: GameViewHolder, position: Int, model: Game) {
         holder.bindView(model)
         holder.itemView.setOnClickListener {
-//            val i = Intent(context, ComicActivity::class.java)
-//            i.putExtra("title", comic.title)
-//            i.putExtra("img_back", comic.images[0].getFullUrl())
-//            i.putExtra("img_hq", comic.thumbnail.getFullUrl())
-//            i.putExtra("desc", comic.description)
-//            i.putExtra("price", comic.prices[0].price)
-//            i.putExtra("pages", comic.pageCount)
-//            i.putExtra("date", comic.dates[0].getFormattedDate())
-//            context.startActivity(i)
+            val i = Intent(binding.root.context, GameActivity::class.java)
+            i.putExtra("name", model.name)
+            i.putExtra("created", model.created)
+            i.putExtra("desc", model.desc)
+            i.putExtra("img", model.image)
+            i.putExtra("id", model.id)
+            binding.root.context.startActivity(i)
         }
     }
 

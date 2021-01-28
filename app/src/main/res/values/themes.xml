@@ -30,4 +30,13 @@
         <item name="android:navigationBarColor">@color/blue_gray</item>
 
     </style>
+
+    <style name="Theme.DesafioFirebaseNoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.DesafioFirebaseNoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.DesafioFirebaseNoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
